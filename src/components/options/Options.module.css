@@ -1,0 +1,19 @@
+.feedback {
+    padding: 20px;
+    border: 2px solid black;
+    display: flex;
+    gap: 10px;
+    width: 400px;
+    background-color: rgb(209, 209, 158);
+}
+
+.btn {
+    cursor: pointer;
+    width: 90px;
+    height: 30px;
+    color: aliceblue;
+    background-color: black;
+    border-radius: 20px;
+    font-weight: 700;
+    box-shadow: 1px 5px 10px 2px gray;
+}

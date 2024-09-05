@@ -1,3 +1,5 @@
+import s from './Options.module.css'
+
 const Options = ({ feedback, setFeedback }) => {
     const updateFeedback = (feedbackType) => {
         setFeedback((prevFeedback) => ({
@@ -17,11 +19,11 @@ const Options = ({ feedback, setFeedback }) => {
     const totalFeedback = feedback.good + feedback.neutral + feedback.bad;
 
     return (
-        <div>
-            <button onClick={() => updateFeedback('good')}>Good</button>
-            <button onClick={() => updateFeedback('neutral')}>Neutral</button>
-            <button onClick={() => updateFeedback('bad')}>Bad</button>
-            {totalFeedback > 0 && <button onClick={resetFeedback}>Reset</button>}
+        <div className={s.feedback}>
+            <button className={s.btn} onClick={() => updateFeedback('good')}>Good</button>
+            <button className={s.btn} onClick={() => updateFeedback('neutral')}>Neutral</button>
+            <button className={s.btn} onClick={() => updateFeedback('bad')}>Bad</button>
+            {totalFeedback > 0 && <button className={s.btn} onClick={resetFeedback}>Reset</button>}
         </div>
     );
 };
