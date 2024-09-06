@@ -4,7 +4,7 @@ const Feedback = ({ feedback }) => {
   const totalFeedback = feedback.good + feedback.neutral + feedback.bad;
 
   if (totalFeedback === 0) {
-    return <Notification message="No feedback given yet" />;
+    return <p>There are no reviews</p>;
   }
 
   return (
@@ -30,7 +30,5 @@ const Feedback = ({ feedback }) => {
     </div>
   );
 };
-
-const Notification = ({ message }) => <p>{message}</p>;
 
 export default Feedback;
