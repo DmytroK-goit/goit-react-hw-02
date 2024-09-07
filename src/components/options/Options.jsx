@@ -1,8 +1,11 @@
 import s from "./Options.module.css";
 
-const Options = ({ feedback, updateFeedback, resetFeedback }) => {
-  const totalFeedback = feedback.good + feedback.neutral + feedback.bad;
-
+const Options = ({
+  feedback,
+  updateFeedback,
+  resetFeedback,
+  totalFeedback,
+}) => {
   return (
     <div className={s.feedback}>
       <button className={s.btn} onClick={() => updateFeedback("good")}>

@@ -46,6 +46,7 @@ const App = () => {
         setFeedback={setFeedback}
         resetFeedback={resetFeedback}
         updateFeedback={updateFeedback}
+        totalFeedback={totalFeedback}
       />
 
       {totalFeedback !== 0 ? (
