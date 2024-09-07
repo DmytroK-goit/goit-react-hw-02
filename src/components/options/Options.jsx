@@ -1,21 +1,6 @@
 import s from "./Options.module.css";
 
-const Options = ({ feedback, setFeedback }) => {
-  const updateFeedback = (feedbackType) => {
-    setFeedback((prevFeedback) => ({
-      ...prevFeedback,
-      [feedbackType]: prevFeedback[feedbackType] + 1,
-    }));
-  };
-
-  const resetFeedback = () => {
-    setFeedback({
-      good: 0,
-      neutral: 0,
-      bad: 0,
-    });
-  };
-
+const Options = ({ feedback, updateFeedback, resetFeedback }) => {
   const totalFeedback = feedback.good + feedback.neutral + feedback.bad;
 
   return (

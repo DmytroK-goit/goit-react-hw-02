@@ -1,12 +1,6 @@
 import s from "./Feedback.module.css";
 
-const Feedback = ({ feedback }) => {
-  const totalFeedback = feedback.good + feedback.neutral + feedback.bad;
-
-  if (totalFeedback === 0) {
-    return <p>There are no reviews</p>;
-  }
-
+const Feedback = ({ feedback, totalFeedback, positiveFeedback }) => {
   return (
     <div className={s.wrap}>
       <h2 className={s.header}>Feedback Statistics</h2>
@@ -18,14 +12,14 @@ const Feedback = ({ feedback }) => {
         className={s.res}
         style={{
           color:
-            Math.round((feedback.good / totalFeedback) * 100) < 50
+            positiveFeedback() < 50
               ? "red"
-              : Math.round((feedback.good / totalFeedback) * 100) < 80
+              : positiveFeedback() < 80
               ? " rgb(231, 231, 13)"
               : "green",
         }}
       >
-        Positive feedback: {Math.round((feedback.good / totalFeedback) * 100)}%
+        Positive feedback: {positiveFeedback()}%
       </p>
     </div>
   );

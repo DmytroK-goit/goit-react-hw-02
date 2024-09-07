@@ -1,0 +1,16 @@
+.wrap {
+  width: 700px;
+  border: 2px solid black;
+  padding: 10px;
+  background-color: rgb(209, 209, 158);
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.header {
+  text-shadow: 5px 5px 10px gray;
+}
+
+.text {
+  font-weight: 700;
+  text-shadow: 5px 5px 10px gray;
+}
